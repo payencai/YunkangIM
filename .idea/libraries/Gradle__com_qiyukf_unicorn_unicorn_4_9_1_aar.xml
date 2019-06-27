@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.qiyukf.unicorn:unicorn:4.9.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64a0427e04bc60127b74d34f8fce51f/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64a0427e04bc60127b74d34f8fce51f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64a0427e04bc60127b74d34f8fce51f/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qiyukf.unicorn/unicorn/4.9.1/c695bfdda001fd4eb12f64d8986ead4cd4a91a66/unicorn-4.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

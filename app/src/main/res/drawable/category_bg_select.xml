@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--true  是你选中时的状态   drawable="@color/baise"  这里你也可以换成一张图片-->
+    <item android:drawable="@color/color_666" android:state_checked="true" />
+    <item android:drawable="@color/color_blue" android:state_checked="false" />
+</selector>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="15dp"
+    >
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_test" />
+
+    <TextView
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="血常规，嗜酸性粒细胞…"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:layout_gravity="center_horizontal"
+            android:id="@+id/id_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            zhy:max_select="3"></com.zhy.view.flowlayout.TagFlowLayout>
+
+
+
+    <RelativeLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/iv_logo"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_realprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="¥343454"
+            android:textColor="#FF7400"
+            android:textSize="15sp" />
+        <LinearLayout
+
+            android:id="@+id/ll_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="￥321"
+                android:textColor="#FF7400"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="￥321"
+                android:textColor="@color/color_999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_add" />
+    </RelativeLayout>
+</LinearLayout>

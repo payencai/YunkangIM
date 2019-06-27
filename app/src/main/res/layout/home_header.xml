@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:elevation="1dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_toLeftOf="@id/iv_service"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_shape_alltransparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/ic_search"
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_14" />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textColorHint="@color/white"
+                        android:background="@color/alltransparent"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:text="搜索相关内容"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/iv_service"
+                    android:layout_toLeftOf="@id/iv_msg"
+                    android:src="@mipmap/ic_service"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/iv_msg"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_message"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+            <com.youth.banner.Banner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="190dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:background="@drawable/bg_radius_white"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100">
+            <LinearLayout
+                android:id="@+id/ll_baogao"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ic_check"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999"
+                    android:text="检测报告"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_bulu"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ic_bulu"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999"
+                    android:text="检测补录"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_undo"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ic_undo"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999"
+                    android:text="待办事项"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ic_collect"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_999"
+                    android:text="收藏夹"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.yunkang.chat.view.HorizontalListView
+            android:id="@+id/lv_category"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+          >
+        </com.yunkang.chat.view.HorizontalListView>
+
+
+    </LinearLayout>
+</LinearLayout>

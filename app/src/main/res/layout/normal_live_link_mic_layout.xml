@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yunkang.chat.watch.linkMic.widget.PolyvNormalLinkMicView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:visibility="invisible"
+    android:id="@+id/normal_live_link_mic_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dm_60">
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/link_mic_head_back"
+        android:id="@+id/link_mic_fixed_position"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm_60"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <com.yunkang.chat.watch.linkMic.widget.PolyvLinkMicListView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm_60">
+
+        <LinearLayout
+            android:id="@+id/link_mic_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm_60"
+            android:orientation="horizontal"
+            android:visibility="invisible" />
+    </com.yunkang.chat.watch.linkMic.widget.PolyvLinkMicListView>
+</com.yunkang.chat.watch.linkMic.widget.PolyvNormalLinkMicView>

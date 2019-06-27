@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.agora.rtc:full-sdk:2.3.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/afc309b975ccb9f5cd4a8f64bc26da9a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/afc309b975ccb9f5cd4a8f64bc26da9a/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

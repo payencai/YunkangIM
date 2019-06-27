@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".start.fragment.CategoryFragment">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlFooterTranslationViewId="@+id/viewpager">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlPrimaryColor="#444"
+            app:srlAccentColor="@android:color/white"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_75"
+                android:background="#499FE5">
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/tab_category"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/color_blue"
+                    app:tl_indicator_color="@color/white"
+                    app:tl_indicator_corner_radius="10dp"
+                    app:tl_indicator_height="3dp"
+                    app:tl_indicator_width_equal_title="false"
+                    app:tl_tab_padding="10dp"
+                    app:tl_indicator_width="30dp"
+                    app:tl_tab_space_equal="false"
+                    app:tl_textSelectColor="@color/white"
+                    app:tl_textUnselectColor="@color/white"
+                    app:tl_textsize="14sp" />
+
+            </RelativeLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</LinearLayout>

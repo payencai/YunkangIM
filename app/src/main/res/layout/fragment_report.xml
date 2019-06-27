@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.fragment.ReportFragment">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlPrimaryColor="#444"
+            app:srlAccentColor="@android:color/white">
+        </com.scwang.smartrefresh.layout.header.ClassicsHeader>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f7f7f7"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100"
+                                android:textColor="#499FE5"
+                                android:textSize="36sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="报告总数"
+                                android:textColor="#666"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:text="下单时间"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f3f3f3"></View>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp">
+
+                            <LinearLayout
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_search">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_left"
+                                    android:padding="5dp"
+                                    android:background="@drawable/bg_report_time"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <LinearLayout
+                                        android:layout_centerInParent="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_start"
+                                            android:textColor="#666666"
+                                            android:textSize="14sp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2018-12-20" />
+
+                                        <ImageView
+                                            android:layout_marginLeft="5dp"
+                                            android:src="@mipmap/ic_gray_down"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp" />
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+                                <TextView
+                                    android:layout_marginLeft="15dp"
+                                    android:text="-"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RelativeLayout
+                                    android:id="@+id/rl_right"
+                                    android:background="@drawable/bg_report_time"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1">
+
+                                    <LinearLayout
+                                        android:layout_centerInParent="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_end"
+                                            android:textSize="14sp"
+                                            android:textColor="#666666"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2018-12-30" />
+
+                                        <ImageView
+                                            android:layout_marginLeft="5dp"
+                                            android:src="@mipmap/ic_gray_down"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp" />
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_search"
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/bg_search"
+                                android:gravity="center"
+
+                                android:text="搜索"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_report"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_home_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+</FrameLayout>

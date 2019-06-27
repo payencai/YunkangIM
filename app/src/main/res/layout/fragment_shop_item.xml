@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.fragment.ReportItemFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_shopitem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:paddingLeft="15dp"
+            android:layout_toLeftOf="@id/tv_open"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_unchoose"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:textColor="#666"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="全部选择"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_open"
+            android:textSize="16sp"
+            android:background="@color/color_blue"
+            android:gravity="center"
+            android:text="开票"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_width="115dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

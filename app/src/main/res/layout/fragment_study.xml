@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".start.fragment.StudyFragment">
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:background="@color/color_blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_75">
+            <com.flyco.tablayout.SlidingTabLayout
+                android:layout_marginBottom="10dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/tab_study"
+                android:layout_alignParentBottom="true"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@color/color_blue"
+                app:tl_indicator_color="@color/white"
+                app:tl_indicator_corner_radius="5dp"
+                app:tl_indicator_height="3dp"
+                app:tl_indicator_width="30dp"
+                app:tl_indicator_width_equal_title="false"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/white"
+
+                app:tl_textUnselectColor="@color/white"
+                app:tl_textsize="14sp" />
+        </RelativeLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:background="#499FE5"
+            android:layout_height="70dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:text="学习"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_nostudy"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/color_666"
+                    android:text="暂无学习内容"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

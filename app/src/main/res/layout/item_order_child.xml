@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="#FBFCFC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_test"
+            android:layout_width="85dp"
+            android:layout_height="85dp" />
+        <LinearLayout
+            android:padding="2dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="血常规，嗜酸性粒细胞计数，嗜酸性粒细胞计数…"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+             <LinearLayout
+                 android:layout_marginTop="3dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:id="@+id/tv_count"
+                     android:textSize="13sp"
+                     android:textColor="@color/color_999"
+                     android:gravity="center"
+                     android:text="购买数量：1"
+                     android:layout_alignParentRight="true"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+             </LinearLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/tv_price"
+                    android:id="@+id/tv_shop"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_999"
+                    android:textSize="13sp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="供应商 北京"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:textSize="14sp"
+                    android:textColor="#FF7400"
+                    android:gravity="center"
+                    android:text="￥111"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_time"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_clock"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:textColor="#666"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

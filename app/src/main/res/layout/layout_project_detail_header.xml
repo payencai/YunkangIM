@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_stickynavlayout_topview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@color/color_blue"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+        </RelativeLayout>
+        <TextView
+            android:textColor="@color/color_333"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@color/white"
+            android:text="血常规，嗜酸性粒细胞计数，痰涂片、培养及药物敏感试验直播课程"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <ImageView
+                android:background="@color/alltransparent"
+                android:src="@drawable/play"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_999"
+                android:text="1500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:background="#f7f7f7"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+</LinearLayout>

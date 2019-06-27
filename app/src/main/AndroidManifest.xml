@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yunkang.chat">
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 储存卡的读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 调用相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 微信支付 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 连麦 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_config"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:name=".study.PlayVideoActivity"></activity>
+        <activity android:name=".study.CommentDetailActivity" />
+        <activity android:name=".study.VideoContentActivity" />
+        <activity
+            android:name=".study.VideoDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.xx.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+        <provider
+            android:name=".tools.UpdateProvider"
+            android:authorities="com.yunkang.chat"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path_update" />
+        </provider> <!-- 微支付SDK界面 -->
+        <!-- 显示网页界面 -->
+        <activity
+            android:name="com.iapppay.sdk.main.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.PersonCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection" /> <!-- 收银台-普通 -->
+        <activity
+            android:name="com.iapppay.ui.activity.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection" /> <!-- 选择充值金额界面 -->
+        <activity
+            android:name="com.iapppay.ui.activity.SelectAmountActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.iapppay.ui.activity.ChargeActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask" /> <!-- 游戏卡和话费卡界面 -->
+        <activity
+            android:name="com.iapppay.ui.card.GamepayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask" /> <!-- alipay sdk begin (新的支付宝) -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" /> <!-- alipay sdk end -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.activity.AlwaysOpenActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.MyOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".home.activity.RecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".home.activity.WaittodoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".home.activity.CollectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.SettingsActivity"
+            android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5c7c9739203657f795000989" />
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".start.activity.MainActivity" />
+        <activity
+            android:name=".start.activity.WecomeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/WelcomeStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".start.activity.SplashActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/WelcomeStyle" />
+        <activity android:name=".start.activity.GuideActivity" />
+        <activity
+            android:name=".start.activity.LoginActivity"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".start.activity.ForgetPasswordActivity" />
+        <activity
+            android:name=".start.activity.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".start.activity.BindPhoneActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".mine.activity.CallLogisticsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.UserInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.UpdateBindActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.BindAlipayActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.UpdatePasswordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.RebackActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".home.activity.MsgActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name=".home.activity.SearchActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".category.activity.CategoryGoodsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".mine.activity.AboutActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.VersioninfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".mine.activity.AfterSaleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".h5.H5CommomActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".start.activity.AnotherMainActivity" />
+        <activity
+            android:name=".mine.activity.UpdateNicknameActivity"
+            android:launchMode="singleTop" /> <!-- 适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+
+        <activity
+            android:name=".watch.PolyvCloudClassHomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <receiver
+            android:name=".JPush.JpushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" /> <!-- 开机广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> <!-- 网络状态改变广播 -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.yunkang.miaoyizhai" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".home.activity.MsgDetailActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".home.activity.NewReportActivity" />
+        <activity android:name=".mine.activity.MyWalletActivity" />
+        <activity android:name=".home.activity.ServiceActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_radius_white"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/color_333"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="用户协议"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:layout_above="@id/tv_confirm"
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_confirm"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="确定"
+            android:background="@drawable/bg_blue_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+</LinearLayout>

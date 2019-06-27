@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="15dp"
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_default_head"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+            <View
+                android:visibility="gone"
+                android:id="@+id/view"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_circle_guide1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"></View>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:textColor="@color/color_333"
+                    android:textSize="15sp"
+                    android:text="账号通知"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_999"
+                    android:textSize="12sp"
+                    android:text="2018-12-12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_999"
+                android:textSize="13sp"
+                android:text="你的提现已到账，请查看！"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_red"
+        android:text="删除"
+        android:textColor="@android:color/white"/>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

@@ -1,0 +1,8 @@
+<paths>
+    <external-path
+        name="my_images"
+        path="Pictures"/>
+    <external-cache-path
+        name="app_update_cache"
+        path="/" />
+</paths>

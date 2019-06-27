@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.limxing:Android-PromptDialog:1.1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d890fc8ce3967d81f6cdb6dc8bea74de/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d890fc8ce3967d81f6cdb6dc8bea74de/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.limxing/Android-PromptDialog/1.1.3/b1378eca0fc4c18551aaafe70b17e071199ac946/Android-PromptDialog-1.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

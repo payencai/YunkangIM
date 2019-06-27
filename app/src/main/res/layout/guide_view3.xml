@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_guide3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="center"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/icon_guide3"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#FEBE47"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="极速报告寄送"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_circle_white"
+            android:layout_width="10dp"
+            android:layout_height="10dp">
+
+        </View>
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_circle_white"
+            android:layout_width="10dp"
+            android:layout_height="10dp">
+
+        </View>
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_circle_guide3"
+            android:layout_width="10dp"
+            android:layout_height="10dp">
+
+        </View>
+        <View
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_circle_white"
+            android:layout_width="10dp"
+            android:layout_height="10dp">
+
+        </View>
+    </LinearLayout>
+</RelativeLayout>

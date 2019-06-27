@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:background="@color/color_blue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back"
+            android:padding="10dp"
+            android:src="@mipmap/ic_white_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:text="学习"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_below="@id/rl_top"
+        android:layout_above="@id/ll_bottom"
+        android:id="@+id/shl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.design.widget.AppBarLayout
+            app:elevation="0dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                 <RelativeLayout
+                     android:background="@color/color_blue"
+                     android:layout_width="match_parent"
+                     android:layout_height="220dp">
+                     <cn.jzvd.JZVideoPlayerStandard
+                         android:id="@+id/videoplayer"
+                         android:layout_width="match_parent"
+                         android:layout_height="220dp"/>
+                 </RelativeLayout>
+                 <TextView
+                     android:id="@+id/tv_title"
+                     android:textColor="@color/color_333"
+                     android:padding="10dp"
+                     android:textSize="15sp"
+                     android:background="@color/white"
+                     android:text="血常规，嗜酸性粒细胞计数，痰涂片、培养及药物敏感试验直播课程"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:background="@color/alltransparent"
+                        android:src="@mipmap/ic_black_video"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/color_999"
+                        android:text="1500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:background="#f7f7f7"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/slidingTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                app:tl_indicator_color="@color/color_blue"
+                app:tl_indicator_height="2dp"
+                app:tl_indicator_width="30dp"
+                app:tl_indicator_width_equal_title="false"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/color_blue"
+                app:tl_textUnselectColor="@color/color_333"
+                app:tl_textsize="16sp"
+                app:tl_underline_color="@color/white"
+                />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <View
+
+            android:background="#f3f3f3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:paddingLeft="15dp"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tv_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:textSize="15sp"
+                    android:textColorHint="#ccc"
+                    android:hint="我来说几句…"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#f3f3f3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+            </LinearLayout>
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_send"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="发布"
+                android:background="@drawable/bg_blue_login"
+                android:layout_width="68dp"
+                android:layout_height="32dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

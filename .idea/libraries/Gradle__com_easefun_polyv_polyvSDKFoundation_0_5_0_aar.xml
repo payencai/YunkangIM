@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.easefun.polyv:polyvSDKFoundation:0.5.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca1a838aa32b323d82fc40f3c21a8545/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca1a838aa32b323d82fc40f3c21a8545/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca1a838aa32b323d82fc40f3c21a8545/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.easefun.polyv/polyvSDKFoundation/0.5.0/5c016d20418c4931adf24119205b9c647057784b/polyvSDKFoundation-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

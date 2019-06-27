@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--通用颜色-->
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="halftransparent">#4D000000</color>
+    <color name="alltransparent">#00000000</color>
+    <!--进入主界面前的颜色开始-->
+    <color name="bg_guide1">#FEE1DB</color>
+    <color name="bg_guide2">#C0E8FE</color>
+    <color name="bg_guide3">#FEF1C2</color>
+    <color name="bg_guide4">#D9F8FF</color>
+    <color name="stroke_circle_guide1">#FF545B</color>
+    <color name="stroke_circle_guide2">#49BBFA</color>
+    <color name="stroke_circle_guide3">#FEBE47</color>
+    <color name="color_666">#666666</color>
+    <color name="color_333">#333333</color>
+    <color name="color_999">#999999</color>
+    <color name="color_blue">#499FE5</color>
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_yellow">#FF7400</color>
+    <!--进入主界面前的颜色结束-->
+    <color name="color_red">#FD2E4A</color>
+    <color name="video_back">#D6F2FF</color>
+    <color name="place_holder_color">#bfbfbf</color>
+    <!--主界面颜色开始-->
+    <color name="color_f7">#f7f7f7</color>
+    <color name="tab_text_select">#499FE5</color>
+    <color name="tab_text_unselect">#999999</color>
+    <!--主界面颜色结束-->
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mine.activity.AfterSaleActivity">
+    <LinearLayout
+        android:layout_above="@+id/tv_sale"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/commom_top">
+
+        </include>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlFooterTranslationViewId="@+id/rv_sale">
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="FixedBehind"
+                app:srlPrimaryColor="#444"
+                app:srlAccentColor="@android:color/white">
+            </com.scwang.smartrefresh.layout.header.ClassicsHeader>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_sale"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_home_collect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_sale"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="#499FE5"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="申请售后"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+</RelativeLayout>

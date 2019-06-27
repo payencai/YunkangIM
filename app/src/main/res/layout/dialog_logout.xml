@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="50dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:id="@+id/tv_title"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/color_333"
+        android:text="确定退出登录？"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="40dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:textSize="14sp"
+            android:textColor="@color/color_999"
+            android:gravity="center"
+            android:text="取消"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <View
+
+            android:background="#ccc"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"></View>
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="确认"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

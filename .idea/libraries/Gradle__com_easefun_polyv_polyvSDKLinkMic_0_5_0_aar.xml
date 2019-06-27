@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.easefun.polyv:polyvSDKLinkMic:0.5.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5bcfdc76c94e9fe66dd95cc0e562f95/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5bcfdc76c94e9fe66dd95cc0e562f95/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.easefun.polyv/polyvSDKLinkMic/0.5.0/124ffbd3412e9ed62f21e55b8539be26cec5c457/polyvSDKLinkMic-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

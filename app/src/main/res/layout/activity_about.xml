@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mine.activity.AboutActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#499FE5"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_white_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="关于我们"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="关于我们" />
+        <TextView
+            android:textColor="@color/color_666"
+            android:textSize="14sp"
+            android:text="           云康集团源于中山大学，是国有上市企业中山大学达安基因（股票代码：002030）控股从事专业医学服务、大众健康服务及相关技术支持的国有大型高科技企业集团，是中山大学医学科技服务体系的核心成员和执行单位。云康秉承“全面健康”生活理念，致力于通过与国际国内专业机构和产业伙伴进行多方合作，协助各级各类医疗卫生机构不断提升服务能力、改善服务质量，使社会大众能够获得更加专业、便捷的医疗健康服务，从而实现“健康社区·健康家”的美好愿景"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
