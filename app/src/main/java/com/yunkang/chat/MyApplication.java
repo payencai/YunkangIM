@@ -14,6 +14,10 @@ import com.easefun.polyv.businesssdk.vodplayer.PolyvVodSDKClient;
 import com.easefun.polyv.cloudclass.config.PolyvLiveSDKClient;
 import com.easefun.polyv.foundationsdk.log.PolyvCommonLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.hyphenate.EMConnectionListener;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMOptions;
+import com.hyphenate.easeui.EaseUI;
 import com.lzy.okgo.OkGo;
 import com.qiyukf.unicorn.api.StatusBarNotificationConfig;
 import com.qiyukf.unicorn.api.UICustomization;
@@ -124,33 +128,33 @@ public class MyApplication extends MultiDexApplication {
         String CRASH = getRootFilePath() + "EasySport/crashLog";
 
     }
-//    private void initChat(Context context) {
-//        EMOptions options = new EMOptions();
-//// 默认添加好友时，是不需要验证的，改成需要验证
-//        options.setAcceptInvitationAlways(false);
-//
-//        options.isAutoAcceptGroupInvitation();
-//        options.setAppKey("1121190511097928#huafeng");
-//// 是否自动将消息附件上传到环信服务器，默认为True是使用环信服务器上传下载，如果设为 false，需要开发者自己处理附件消息的上传和下载
-//        options.setAutoTransferMessageAttachments(true);
-//// 是否自动下载附件类消息的缩略图等，默认为 true 这里和上边这个参数相关联
-//        options.setAutoDownloadThumbnail(true);
-//        //options.setAutoLogin(false);
-////初始化
-//        EaseUI.getInstance().init(context,  options);
-//        EMClient.getInstance().init(context,options);
-////在做打包混淆时，关闭debug模式，避免消耗不必要的资源
-//        EMClient.getInstance().setDebugMode(true);
-//        //注册一个监听连接状态的listener
-//
-//        EMClient.getInstance().addConnectionListener(new EMConnectionListener() {
-//            @Override
-//            public void onConnected() {
-//
-//            }
-//
-//            @Override
-//            public void onDisconnected(int error) {
+    private void initChat(Context context) {
+      EMOptions options = new EMOptions();
+// 默认添加好友时，是不需要验证的，改成需要验证
+        options.setAcceptInvitationAlways(false);
+
+        options.isAutoAcceptGroupInvitation();
+        options.setAppKey("1121190511097928#huafeng");
+// 是否自动将消息附件上传到环信服务器，默认为True是使用环信服务器上传下载，如果设为 false，需要开发者自己处理附件消息的上传和下载
+        options.setAutoTransferMessageAttachments(true);
+// 是否自动下载附件类消息的缩略图等，默认为 true 这里和上边这个参数相关联
+        options.setAutoDownloadThumbnail(true);
+        //options.setAutoLogin(false);
+//初始化
+        EaseUI.getInstance().init(context,  options);
+        EMClient.getInstance().init(context,options);
+//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
+        EMClient.getInstance().setDebugMode(true);
+        //注册一个监听连接状态的listener
+
+        EMClient.getInstance().addConnectionListener(new EMConnectionListener() {
+            @Override
+            public void onConnected() {
+
+            }
+
+            @Override
+            public void onDisconnected(int error) {
 //                if(error == EMError.USER_REMOVED){
 //                    // 显示帐号已经被移除
 //                    ToastUtils.showLong("你的账号被移除");
@@ -162,10 +166,10 @@ public class MyApplication extends MultiDexApplication {
 //                } else {
 //
 //                }
-//
-//            }
-//        });
-//    }
+
+            }
+        });
+    }
     @Override
     public void onCreate() {
         super.onCreate();
@@ -174,7 +178,7 @@ public class MyApplication extends MultiDexApplication {
         JPushInterface.init(this);
         Fresco.initialize(this);
         registerToWX();
-
+        initChat(this);
         //NetUtils.getInstance();
         NetUtils.getInstance().initNetWorkUtils(this);
 

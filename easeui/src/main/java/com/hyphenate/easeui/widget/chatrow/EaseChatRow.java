@@ -2,6 +2,7 @@ package com.hyphenate.easeui.widget.chatrow;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.BaseAdapter;
@@ -22,6 +23,7 @@ import com.hyphenate.easeui.utils.EaseUserUtils;
 import com.hyphenate.easeui.widget.EaseChatMessageList;
 import com.hyphenate.easeui.widget.EaseChatMessageList.MessageListItemClickListener;
 import com.hyphenate.easeui.widget.EaseImageView;
+import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.DateUtils;
 
 import java.util.Date;
@@ -105,7 +107,7 @@ public abstract class EaseChatRow extends LinearLayout {
 
     /**
      * set property according message and postion
-     * 
+     *
      * @param message
      * @param position
      */
@@ -145,10 +147,25 @@ public abstract class EaseChatRow extends LinearLayout {
         if(userAvatarView != null) {
             //set nickname and avatar
             if (message.direct() == Direct.SEND) {
-                EaseUserUtils.setUserAvatar(context, EMClient.getInstance().getCurrentUser(), userAvatarView);
+
+                try {
+                    Log.e("send",message.getStringAttribute("avatar"));
+                    EaseUserUtils.setUserAvatar2(context, message.getStringAttribute("avatar"), userAvatarView);
+                    //EaseUserUtils.setUserNick2(message.getStringAttribute("nickName"),usernickView);
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+                //EaseUserUtils.setUserAvatar(context, EMClient.getInstance().getCurrentUser(), userAvatarView);
             } else {
-                EaseUserUtils.setUserAvatar(context, message.getFrom(), userAvatarView);
-                EaseUserUtils.setUserNick(message.getFrom(), usernickView);
+                //Log.e("receive", message.getType() + "");
+                try {
+                    EaseUserUtils.setUserAvatar2(context, message.getStringAttribute("avatar"), userAvatarView);
+                    EaseUserUtils.setUserNick2(message.getStringAttribute("nickName"), usernickView);
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+//                EaseUserUtils.setUserAvatar(context, message.getFrom(), userAvatarView);
+//                EaseUserUtils.setUserNick(message.getFrom(), usernickView);
             }
         }
         if (EMClient.getInstance().getOptions().getRequireDeliveryAck()) {
@@ -217,7 +234,7 @@ public abstract class EaseChatRow extends LinearLayout {
     private void setClickListener() {
         if(bubbleLayout != null){
             bubbleLayout.setOnClickListener(new OnClickListener() {
-    
+
                 @Override
                 public void onClick(View v) {
                     if (itemClickListener != null && itemClickListener.onBubbleClick(message)){
@@ -228,9 +245,9 @@ public abstract class EaseChatRow extends LinearLayout {
                     }
                 }
             });
-    
+
             bubbleLayout.setOnLongClickListener(new OnLongClickListener() {
-    
+
                 @Override
                 public boolean onLongClick(View v) {
                     if (itemClickListener != null) {
@@ -258,7 +275,7 @@ public abstract class EaseChatRow extends LinearLayout {
 
         if(userAvatarView != null){
             userAvatarView.setOnClickListener(new OnClickListener() {
-    
+
                 @Override
                 public void onClick(View v) {
                     if (itemClickListener != null) {
@@ -271,7 +288,7 @@ public abstract class EaseChatRow extends LinearLayout {
                 }
             });
             userAvatarView.setOnLongClickListener(new OnLongClickListener() {
-                
+
                 @Override
                 public boolean onLongClick(View v) {
                     if(itemClickListener != null){
@@ -302,7 +319,7 @@ public abstract class EaseChatRow extends LinearLayout {
 
     /**
      * setup view
-     * 
+     *
      */
     protected abstract void onSetUpView();
 }
